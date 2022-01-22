@@ -236,7 +236,7 @@ fn read_with_buffer_larger_than_max() {
     let chunk_c = chunk_a * 3;
     let chunk_d = chunk_a * 4;
 
-    assert_eq!(chunk_d / 1024 / 1024, 8);
+    assert_eq!(chunk_d / 1024 / 1024, 512);
 
     let mut data = vec![];
     for i in 0..(chunk_d - 1) {
@@ -308,7 +308,7 @@ fn write_with_buffer_larger_than_max() {
     let chunk_c = chunk_a * 3;
     let chunk_d = chunk_a * 4;
 
-    assert_eq!(chunk_d / 1024 / 1024, 8);
+    assert_eq!(chunk_d / 1024 / 1024, 512);
 
     let mut data = vec![];
     for i in 0..(chunk_d - 1) {
